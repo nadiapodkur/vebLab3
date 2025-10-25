@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+@font-face {
+    font-family: myCursive;
+    src: url(../fonts/myCursive.ttf);
+}
+
+.whole_body {
+    width: 100%;
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+.left_section {
+    float: left;
+    width: 70%; 
+    position: relative; 
+    min-height: 100vh;
+    padding-bottom: 100px; 
+}
+
+.right_section {
+    float: right; 
+    width: 27%; 
+    position: relative; 
+    min-height: 100vh;
+    padding-bottom: 167px; 
+    background-color: lightgray;
+}
+
+.one {
+    position: relative;
+    background-image: url(../images/header_photo.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%; 
+    margin: 0;
+}
+
+.tree {
+    padding: 1%; 
+    background-color: lightgray;
+    font-family: cursive;
+    margin: 0;
+}
+
+.two {
+    background-color: transparent; 
+    font-family: cursive;
+    margin: 0;
+    padding: 2% 2% 2% 2%; 
+}
+
+.four {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    background-image: url(../images/footer.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    margin: 0;
+}
+
+.five {
+    position: absolute; 
+    height: 15%;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    background-color: darkgray;
+
+}
+
+.header-title {
+    float: right; 
+    padding: 3%; 
+    font-family: myCursive; 
+    font-size: 4vw; 
+    color: white;
+}
+
+.intro-text {
+    font-weight: bold;
+}
+
+.studio-photo {
+    width: 30%; 
+    height: auto;
+}
+
+.footer-text {
+    color: white; 
+    font-family: myCursive; 
+    font-size: xx-large; 
+    padding-left: 4%;
+}
+
+.nav-list {
+    font-size: xx-large; 
+    font-family: cursive;
+    margin: 0;
+    padding-top: 0;
+}
+
+li {
+    font-size: x-large;
+}
+
+.nav-link {
+    color: black;
+}
+
+.contact-header {
+    font-family: myCursive; 
+    padding: 5%; 
+    font-size: xx-large; 
+    position: relative;
+    left: 5%;
+    margin: 0;
+}
