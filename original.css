@@ -92,6 +92,14 @@ h2 {
         margin-bottom: 20px; /* Add some space between the new stacked sections */
     }
 
+    .two li {
+        margin-top: 10%;
+    }
+
+    .tree {
+        height: max-content;
+    }
+
     /* Optional: Adjust header font size for smaller screens if needed */
     .one h1 {
         font-size: 8vw !important; /* Larger font size for better readability on mobile */
