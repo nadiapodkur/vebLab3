@@ -70,67 +70,35 @@ h2 {
 
 /* ... [Оригінальний CSS-код залишається без змін] ... */
 
-/* -------------------------------------------------------------------------- */
-/* МОБІЛЬНА АДАПТАЦІЯ: ВІДОБРАЖЕННЯ ДЛЯ ЕКРАНІВ МЕНШЕ 600px */
-/* -------------------------------------------------------------------------- */
 @media screen and (max-width: 600px) {
-
-    /* 1. Зміна основного макету на одноколонковий */
     .whole_body {
-        /* Скасовуємо Flexbox для двоколонкового макету */
-        display: block; 
-        width: 100%;
-        gap: 0; /* Видаляємо проміжок */
+        /* Changes to stack the two main sections vertically (one column) */
+        flex-direction: column;
+        gap: 0; /* Remove gap */
     }
 
-    /* 2. Надання обом секціям повної ширини */
-    .left_section {
+    .left_section, .right_section {
+        /* Makes both sections take full width, stacking them */
         width: 100%;
+    }
+
+    /* Change the order to potentially put the menu first on mobile */
+    .left_section {
+        order: 2; /* Content second */
     }
 
     .right_section {
-        width: 100%;
-        /* Навігація/Контакти відображатимуться внизу, але займатимуть 100% ширини */
+        order: 1; /* Navigation/Sidebar first */
+        margin-bottom: 20px; /* Add some space between the new stacked sections */
     }
-    
-    /* 3. Оптимізація елементів всередині секцій */
 
-    /* Заголовок у шапці: фіксований менший розмір */
+    /* Optional: Adjust header font size for smaller screens if needed */
     .one h1 {
-        font-size: 24px !important; /* Фіксований розмір */
-        float: none !important; /* Відключаємо float */
-        text-align: center; /* Вирівнюємо по центру */
-        padding: 5% !important; 
+        font-size: 8vw !important; /* Larger font size for better readability on mobile */
     }
 
-    /* Зображення студії: повна ширина для кращої видимості */
+    /* Adjust image size to fit better on a phone */
     .tree img {
-        width: 100% !important; 
-        height: auto;
-    }
-
-    /* Список навігації: зменшуємо розмір, щоб він помістився */
-    .right_section ul {
-        font-size: large !important;
-        padding: 10px 20px !important; /* Регулюємо відступи */
-    }
-
-    .right_section li {
-        font-size: medium !important;
-    }
-
-    /* Футер: фіксований менший розмір */
-    .four p {
-        font-size: 20px !important;
-        padding: 3% !important;
-        text-align: center;
-    }
-
-    /* Секція контактів: фіксований менший розмір, центрування */
-    .five h2 {
-        font-size: 22px !important;
-        text-align: center;
-        padding: 3% !important;
-        left: 0 !important; /* Відключаємо зсув left: 5% */
+        width: 100% !important; /* Make the studio image full width */
     }
 }
