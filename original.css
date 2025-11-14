@@ -68,45 +68,47 @@ h2 {
     margin-top: auto;
 }
 
-/* ... [Оригінальний CSS-код залишається без змін] ... */
-
 @media screen and (max-width: 600px) {
+
     .whole_body {
-        /* Changes to stack the two main sections vertically (one column) */
-        flex-direction: column;
-        gap: 0; /* Remove gap */
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%; 
+        gap: 0;
     }
 
     .left_section, .right_section {
-        /* Makes both sections take full width, stacking them */
-        width: 100%;
+        display: contents; 
     }
 
-    /* Change the order to potentially put the menu first on mobile */
-    .left_section {
-        order: 2; /* Content second */
+    .one {
+        grid-row: 1 / span 1; 
     }
 
-    .right_section {
-        order: 1; /* Navigation/Sidebar first */
-        margin-bottom: 20px; /* Add some space between the new stacked sections */
+    .two {
+        grid-row: 2 / span 1; 
+    }
+    
+    .three {
+        grid-row: 3 / span 1;
+    }
+    
+    .four {
+        grid-row: 5 / span 1;
+    }
+    
+    .five {
+        grid-row: 4 / span 1;
     }
 
-    .two li {
-        margin-top: 10%;
-    }
-
-    .tree {
-        height: max-content;
-    }
-
-    /* Optional: Adjust header font size for smaller screens if needed */
     .one h1 {
-        font-size: 8vw !important; /* Larger font size for better readability on mobile */
+        font-size: 8vw !important; 
     }
 
-    /* Adjust image size to fit better on a phone */
     .tree img {
-        width: 100% !important; /* Make the studio image full width */
+        width: 100% !important; 
+    }
+    .two li {
+        margin-top: 10%; 
     }
 }
